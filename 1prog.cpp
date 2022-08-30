@@ -1,22 +1,26 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-#include<string.h>
+int& largestNumber(int&,int&,int&);
 int main()
 {
-	char s1[100];
-	char s2[100];
-	cout<<"Enter the username:";
-	cin>>s1;
-	cout<<"Re-enter the username:";
-	cin>>s2;
-	if (strcmp(s1,s2)!=0)
-	{
-		cout<<"Invalid username";
-    }
-	else
-	{
+	int a,b,c;
+	cout<<"Enter 1st number:";
+	cin>>a;
+	cout<<"Enter 2nd number:";
+	cin>>b;
+	cout<<"Enter 3rd number:";
+	cin>>c;
 	
-		cout<<"Valid username";
-}
+	cout<<"";
+
+	cout<<"Largest number is :"<< largestNumber(a,b,c)<< endl;
 	return 0;
+}
+int & largestNumber(int &x,int &y,int &z){
+	if(x > y && x > z)
+		return x;
+	else if(y > x && y> z)
+		return y;
+	else
+		return z;
 }
